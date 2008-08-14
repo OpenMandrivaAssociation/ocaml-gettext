@@ -22,6 +22,7 @@ BuildRequires:  ocaml-camomile-data
 BuildRequires:  docbook-dtd43-xml
 BuildRequires:  docbook-style-xsl
 BuildRequires:  libxslt-proc
+BuildRequires:  chrpath
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
