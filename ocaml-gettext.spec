@@ -1,6 +1,6 @@
 %define name	ocaml-gettext
 %define version	0.3.2
-%define release	%mkrel 2
+%define release	%mkrel 3
 
 Name:		%{name}
 Version:	%{version}
@@ -91,7 +91,7 @@ rm -rf %{buildroot}
 # make install in the package is screwed up completely.  Install
 # by hand instead.
 export DESTDIR=%{buildroot}
-export OCAMLFIND_DESTDIR=%{buildroot}%{ocaml_sitelib}
+export OCAMLFIND_DESTDIR=%{buildroot}%{_libdir}/ocaml
 mkdir -p $OCAMLFIND_DESTDIR $OCAMLFIND_DESTDIR/stublibs
 mkdir -p %{buildroot}%{_bindir}
 
@@ -116,49 +116,49 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc COPYING
-%{ocaml_sitelib}/gettext
-%{ocaml_sitelib}/gettext-stub
-%exclude %{ocaml_sitelib}/gettext/*.a
-%exclude %{ocaml_sitelib}/gettext/*.cmxa
-%exclude %{ocaml_sitelib}/gettext/*.cmx
-%exclude %{ocaml_sitelib}/gettext-stub/*.a
-%exclude %{ocaml_sitelib}/gettext-stub/*.cmxa
-%exclude %{ocaml_sitelib}/gettext-stub/*.cmx
-%exclude %{ocaml_sitelib}/gettext/*.mli
-%exclude %{ocaml_sitelib}/gettext-stub/*.mli
-%{ocaml_sitelib}/stublibs/*.so
-%{ocaml_sitelib}/stublibs/*.so.owner
+%{_libdir}/ocaml/gettext
+%{_libdir}/ocaml/gettext-stub
+%exclude %{_libdir}/ocaml/gettext/*.a
+%exclude %{_libdir}/ocaml/gettext/*.cmxa
+%exclude %{_libdir}/ocaml/gettext/*.cmx
+%exclude %{_libdir}/ocaml/gettext-stub/*.a
+%exclude %{_libdir}/ocaml/gettext-stub/*.cmxa
+%exclude %{_libdir}/ocaml/gettext-stub/*.cmx
+%exclude %{_libdir}/ocaml/gettext/*.mli
+%exclude %{_libdir}/ocaml/gettext-stub/*.mli
+%{_libdir}/ocaml/stublibs/*.so
+%{_libdir}/ocaml/stublibs/*.so.owner
 
 
 %files devel
 %defattr(-,root,root)
 %doc README CHANGELOG TODO
 # %doc build/share/doc/html/*
-%{ocaml_sitelib}/gettext/*.a
-%{ocaml_sitelib}/gettext/*.cmxa
-%{ocaml_sitelib}/gettext/*.cmx
-%{ocaml_sitelib}/gettext-stub/*.a
-%{ocaml_sitelib}/gettext-stub/*.cmxa
-%{ocaml_sitelib}/gettext-stub/*.cmx
-%{ocaml_sitelib}/gettext/*.mli
-%{ocaml_sitelib}/gettext-stub/*.mli
+%{_libdir}/ocaml/gettext/*.a
+%{_libdir}/ocaml/gettext/*.cmxa
+%{_libdir}/ocaml/gettext/*.cmx
+%{_libdir}/ocaml/gettext-stub/*.a
+%{_libdir}/ocaml/gettext-stub/*.cmxa
+%{_libdir}/ocaml/gettext-stub/*.cmx
+%{_libdir}/ocaml/gettext/*.mli
+%{_libdir}/ocaml/gettext-stub/*.mli
 %{_bindir}/ocaml-gettext
 %{_bindir}/ocaml-xgettext
 
 %files camomile
 %defattr(-,root,root)
 %doc COPYING
-%{ocaml_sitelib}/gettext-camomile
-%exclude %{ocaml_sitelib}/gettext-camomile/*.a
-%exclude %{ocaml_sitelib}/gettext-camomile/*.cmxa
-%exclude %{ocaml_sitelib}/gettext-camomile/*.cmx
-%exclude %{ocaml_sitelib}/gettext-camomile/*.mli
+%{_libdir}/ocaml/gettext-camomile
+%exclude %{_libdir}/ocaml/gettext-camomile/*.a
+%exclude %{_libdir}/ocaml/gettext-camomile/*.cmxa
+%exclude %{_libdir}/ocaml/gettext-camomile/*.cmx
+%exclude %{_libdir}/ocaml/gettext-camomile/*.mli
 
 %files camomile-devel
 %defattr(-,root,root)
 %doc README
-%{ocaml_sitelib}/gettext-camomile/*.a
-%{ocaml_sitelib}/gettext-camomile/*.cmxa
-%{ocaml_sitelib}/gettext-camomile/*.cmx
-%{ocaml_sitelib}/gettext-camomile/*.mli
+%{_libdir}/ocaml/gettext-camomile/*.a
+%{_libdir}/ocaml/gettext-camomile/*.cmxa
+%{_libdir}/ocaml/gettext-camomile/*.cmx
+%{_libdir}/ocaml/gettext-camomile/*.mli
 
