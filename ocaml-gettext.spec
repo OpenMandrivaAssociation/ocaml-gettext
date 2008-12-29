@@ -1,6 +1,6 @@
 %define name	ocaml-gettext
 %define version	0.3.2
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -10,9 +10,10 @@ Group:		Development/Other
 License:    LGPLv2+ with exceptions
 URL:        http://sylvain.le-gall.net/ocaml-gettext.html
 Source0:    http://sylvain.le-gall.net/download/%{name}-%{version}.tar.gz
+Patch:      ocaml-gettext-0.3.2-dynlink.patch
 Requires:       ocaml-camomile-data
 BuildRequires:  ocaml >= 3.10.0
-BuildRequires:  findlib
+BuildRequires:  ocaml-findlib
 BuildRequires:  camlp4
 BuildRequires:  ocaml-fileutils-devel
 BuildRequires:  ocaml-camlidl-devel
@@ -69,7 +70,7 @@ signature files for developing applications that use
 
 %prep
 %setup -q
-
+%patch -p 1
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" \
