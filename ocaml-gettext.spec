@@ -1,16 +1,16 @@
-%define name	ocaml-gettext
-%define version	0.3.2
-%define release	%mkrel 4
+%define name    ocaml-gettext
+%define version 0.3.2
+%define release %mkrel 4
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Summary:    OCaml library for i18n
-Group:		Development/Other
-License:    LGPLv2+ with exceptions
-URL:        http://sylvain.le-gall.net/ocaml-gettext.html
-Source0:    http://sylvain.le-gall.net/download/%{name}-%{version}.tar.gz
-Patch:      ocaml-gettext-0.3.2-dynlink.patch
+Name:           %{name}
+Version:        %{version}
+Release:        %{release}
+Summary:        OCaml library for i18n
+Group:          Development/Other
+License:        LGPLv2+ with exceptions
+URL:            http://sylvain.le-gall.net/ocaml-gettext.html
+Source0:        http://sylvain.le-gall.net/download/%{name}-%{version}.tar.gz
+Patch:          ocaml-gettext-0.3.2-dynlink.patch
 Requires:       ocaml-camomile-data
 BuildRequires:  ocaml >= 3.10.0
 BuildRequires:  ocaml-findlib
@@ -24,7 +24,7 @@ BuildRequires:  docbook-dtd43-xml
 BuildRequires:  docbook-style-xsl
 BuildRequires:  libxslt-proc
 BuildRequires:  chrpath
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 Ocaml-gettext provides support for internationalization of Ocaml
