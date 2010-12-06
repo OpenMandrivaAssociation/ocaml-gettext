@@ -1,6 +1,6 @@
 %define name    ocaml-gettext
 %define version 0.3.3
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:           %{name}
 Version:        %{version}
