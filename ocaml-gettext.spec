@@ -8,7 +8,7 @@ Release:        %{release}
 Summary:        OCaml library for i18n
 Group:          Development/Other
 License:        LGPLv2+ with exceptions
-URL:            http://sylvain.le-gall.net/ocaml-gettext.html
+URL:            https://sylvain.le-gall.net/ocaml-gettext.html
 Source0:        http://sylvain.le-gall.net/download/%{name}-%{version}.tar.gz
 Requires:       ocaml-camomile-data
 BuildRequires:  ocaml >= 3.10.0
