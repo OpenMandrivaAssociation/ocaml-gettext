@@ -11,6 +11,11 @@ License:        LGPLv2+ with exceptions
 URL:            https://sylvain.le-gall.net/ocaml-gettext.html
 Source0:        http://sylvain.le-gall.net/download/%{name}-%{version}.tar.gz
 Requires:       ocaml-camomile-data
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  ocaml >= 3.10.0
 BuildRequires:  ocaml-findlib
 BuildRequires:  camlp4
